@@ -1,0 +1,14 @@
+install:
+  - echo "in the installation process"
+
+before_script:
+  - echo "before running the building script"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+script:
+  - echo "Here we are building the image"
+  - docker build -t udagram-reverseproxy .
+  - docker tag udagram-reverseproxy muhammedismaildev/reverseproxy:latest
+  # pushing the image to the docker reg
+  - docker push muhammedismaildev/reverseproxy
+  - echo "image has been pushed"
