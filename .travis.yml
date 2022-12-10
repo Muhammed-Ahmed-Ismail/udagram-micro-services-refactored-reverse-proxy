@@ -11,4 +11,4 @@ script:
   - docker tag udagram-reverseproxy muhammedismaildev/reverseproxy:latest
   # pushing the image to the docker reg
   - docker push muhammedismaildev/reverseproxy
-  - echo "image has been pushed"
+  - echo "image has been pushed "
