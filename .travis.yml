@@ -7,7 +7,7 @@ before_script:
 
 script:
   - echo "Here we are building the image"
-  - docker build -t udagram-reverseproxy .
+  - docker build -t udagram-reverseproxy:v2 .
   - docker tag udagram-reverseproxy muhammedismaildev/reverseproxy:v2
   # pushing the image to the docker reg
   - docker push muhammedismaildev/reverseproxy
